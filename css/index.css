@@ -1,0 +1,436 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Color de fondo oscuro por defecto */
+    color: white; /* Color de texto blanco por defecto */
+}
+
+/*---------------------------------------------------------------------*/
+/* Hero sección estilos */
+.hero {
+    background-image: url('imagen_del_restaurante.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 0; /* Mayor espacio vertical */
+    color: white;
+    display: flex; /* Cambio para usar flexbox */
+    justify-content: center; /* Centrar horizontalmente el contenido */
+}
+
+.hero-content {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    width: 100%; /* Asegura que el contenido ocupe el ancho completo */
+    display: flex; /* Uso de flexbox */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.left-content {
+    flex: 1; /* Ocupa el espacio restante */
+    padding-right: 50px; /* Espaciado entre el contenido izquierdo y derecho */
+}
+
+.right-content img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 400px; /* Ajusta la altura máxima de la imagen */
+}
+
+.hero h1 {
+    font-size: 48px; /* Tamaño de fuente más grande */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Estilo para el texto "Manila" en efecto neon */
+.hero h1 span.neon-text {
+    color: #00A3CC; /* Color azul frío */
+    text-shadow: 0 0 10px #00A3CC, 0 0 20px #00A3CC, 0 0 30px #00A3CC; /* Sombras en capas para el efecto */
+}
+
+.hero p {
+    font-size: 20px; /* Tamaño de fuente más grande */
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px; /* Mayor espacio de relleno */
+    background-color: #FFC300;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px; /* Borde más redondeado */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.cta-button:hover {
+    background-color: #FFD700;
+}
+
+/* Estilos para el contenido izquierdo (texto) */
+.left-content {
+    flex: 1; /* Ocupa el espacio restante */
+    padding-right: 50px; /* Espaciado entre el contenido izquierdo y derecho */
+    opacity: 0; /* Configura la opacidad inicial en 0 */
+    transform: translateX(-30px); /* Desplaza a la izquierda */
+    animation: fadeInRight 1s forwards, slideInRight 1s forwards; /* Aplica las animaciones */
+}
+
+/* Animación de entrada */
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Estilos para la imagen */
+.right-content img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 400px; /* Ajusta la altura máxima de la imagen */
+    opacity: 0; /* Configura la opacidad inicial en 0 */
+    transform: translateX(30px); /* Desplaza a la derecha */
+    animation: fadeInLeft 1s forwards, slideInLeft 1s forwards; /* Aplica las animaciones */
+}
+
+/* Animación de entrada */
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Estilos responsivos para la sección Hero */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0; /* Ajusta el espacio vertical */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Cambio en la dirección del contenido */
+    }
+
+    .left-content,
+    .right-content {
+        padding: 20px; /* Ajusta el espacio interno */
+    }
+
+    .right-content img {
+        max-height: 300px; /* Ajusta la altura máxima de la imagen */
+    }
+
+    .hero h1 {
+        font-size: 36px; /* Tamaño de fuente más pequeño */
+    }
+
+    .hero p {
+        font-size: 18px; /* Tamaño de fuente más pequeño */
+    }
+
+    .cta-button {
+        padding: 12px 24px; /* Ajusta el espacio interno */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+}
+/*---------------------------------------------------------------------*/
+/* Slider sección estilos */
+.slider {
+    overflow: hidden;
+    width: 100%;
+    max-width: 80%; /* Ajusta el valor según tus preferencias */
+    position: relative;
+    margin: 0 auto;
+    background-color: #222; /* Color de fondo oscuro para el contenedor */
+    border-radius: 20px; /* Bordes redondeados para un aspecto más elegante */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+
+.slider-container {
+    display: flex; /* Muestra los slides en una fila */
+    transition: transform 0.5s ease; /* Agrega una transición suave */
+}
+
+.slide {
+    flex: 0 0 100%;
+    transition: opacity 0.5s ease;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio disponible */
+}
+
+/* Estilos para los botones de navegación */
+.slider-nav {
+    text-align: center;
+    margin-top: 15px; /* Espacio entre el slider y los botones */
+}
+
+.slider-nav button {
+    background: none;
+    border: none;
+    font-size: 24px; /* Tamaño más grande para los iconos de flecha */
+    cursor: pointer;
+    margin: 0 15px; /* Mayor espacio entre los botones */
+    transition: opacity 0.3s ease; /* Agrega una transición suave para la opacidad */
+    color: #fff; /* Color de los iconos */
+}
+
+/* Cambia la opacidad al pasar el cursor sobre los botones */
+.slider-nav button:hover {
+    opacity: 0.7;
+}
+
+/* Estilos para los indicadores de navegación */
+.indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #aaa; /* Color de los indicadores */
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambia el color al pasar el cursor sobre los indicadores */
+.indicator.active {
+    background-color: #333;
+}
+
+/* Estilos responsivos para la sección Slider */
+@media (max-width: 768px) {
+    .slider {
+        max-width: 90%; /* Ajusta el ancho máximo */
+    }
+
+    .slider-nav button {
+        font-size: 20px; /* Tamaño de fuente más pequeño para los iconos */
+        margin: 0 10px; /* Ajusta el espacio entre los botones */
+    }
+
+    .indicators {
+        margin-top: 5px; /* Ajusta el espacio superior */
+    }
+
+    .indicator {
+        width: 10px; /* Ajusta el tamaño del indicador */
+        height: 10px; /* Ajusta el tamaño del indicador */
+        margin: 0 3px; /* Ajusta el espacio entre los indicadores */
+    }
+}
+
+/*---------------------------------------------------------------------*/
+
+/* Estilos generales de la sección plato-especial */
+.plato-especial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 40px auto;
+    max-width: 100%;
+}
+
+/* Estilos para las imágenes laterales y la información del plato */
+.plato-especial .side-image,
+.plato-especial .plato-info,
+.plato-especial .plato-image {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.plato-especial .side-image img:hover,
+.plato-especial .plato-image img:hover {
+    transform: scale(1.02);
+    filter: brightness(90%);
+}
+
+/* Estilos específicos para las imágenes y la información del plato */
+.plato-especial .side-image.left,
+.plato-especial .side-image.right {
+    width: 30%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.plato-especial .side-image img,
+.plato-especial .plato-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.plato-especial .plato-info {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.plato-especial .plato-info h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #FFC300;
+}
+
+.plato-especial p {
+    color: #f2f2f2;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.plato-especial .precio {
+    font-weight: bold;
+    color: #FFC300;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.plato-especial .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFC300;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.plato-especial .cta-button:hover {
+    background-color: #FFD700;
+}
+
+/* Estilos responsivos para la sección plato-especial */
+@media (max-width: 768px) {
+    .plato-especial {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plato-especial .side-image.left,
+    .plato-especial .side-image.right {
+        width: 100%;
+    }
+
+    .plato-especial .plato-info {
+        margin: 0;
+    }
+
+    .plato-especial .plato-images {
+        margin-top: 15px;
+    }
+}
+
+/*---------------------------------------------------------------------*/
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    max-width: 800px; /* Ajusta el ancho máximo del modal */
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between; /* Alinea elementos en el espacio */
+    align-items: flex-start; /* Alinea elementos arriba */
+    position: relative;
+}
+
+.modal-content .plato-info {
+    flex: 1; /* Ocupa el espacio restante */
+    margin-right: 20px; /* Agrega espacio entre la información y la imagen */
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #FFC300;
+}
+
+.modal-content p {
+    color: #f2f2f2;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.modal-content .precio {
+    font-weight: bold;
+    color: #FFC300; /* Color amarillo para el precio */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.modal-content .plato-image {
+    max-width: 40%; /* Ajusta el ancho de la imagen */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content .plato-image img {
+    max-height: 100%; /* Ajusta la altura máxima de la imagen */
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    width: auto;
+    height: auto;
+}
+
+/* Estilo para el botón "x" en el modal */
+.modal-content .cta-button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #333;
+    color: #f2f2f2;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .cta-button:hover {
+    background-color: #555;
+}

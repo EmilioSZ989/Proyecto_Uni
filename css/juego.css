@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Color de fondo oscuro por defecto */
+    color: white; /* Color de texto blanco por defecto */
+}
+
+/* Estilo para el contenedor */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Agrega una separación de 10px entre los divs */
+}
+
+/* Estilo para todas las cartas */
+.carta {
+    width: calc(20% - 10px); /* Ajusta el tamaño de las cartas según tu preferencia */
+    padding-bottom: calc(20% - 10px); /* Mantén la relación de aspecto 1:1 para las imágenes */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; /* Tamaño de fuente reducido */
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative; /* Añade posición relativa para posicionar las imágenes hijas */
+}
+
+/* Estilo para las imágenes de la parte frontal (frente) */
+.carta .frente {
+    display: none; /* Inicialmente, oculta las imágenes de la parte frontal */
+    position: absolute; /* Posición absoluta para superponer sobre la parte trasera */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo para las imágenes de la parte trasera (atras) */
+.carta .atras {
+    display: block; /* Inicialmente, muestra las imágenes de la parte trasera */
+    position: absolute; /* Posición absoluta para superponer sobre la parte frontal */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para las cartas cuando se seleccionan */
+.carta.seleccionada {
+    background-color: #f8c400;
+    color: #fff;
+    border-color: transparent;
+}
+
+/* Estilo para el botón de iniciar juego */
+button {
+    background-color: #f8c400;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 auto; /* Esto centrará el botón horizontalmente */
+    display: block; /* Esto asegurará que ocupe todo el ancho disponible */
+    margin-bottom: 20px; /* Agrega un margen inferior al botón */
+}
+
+
+/* Estilo para el título h1 */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px; /* Agrega un margen inferior al título */
+}

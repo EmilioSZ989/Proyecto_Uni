@@ -1,0 +1,311 @@
+/* Establecer las propiedades por defecto para el cuerpo y el HTML */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    background: url("/img/reservacion/fondo.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos para la sección de reservaciones */
+.reservaciones {
+    background-color: rgba(51, 51, 51, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+    max-width: 500px;
+    animation: fadeInUp 1s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para el título en la sección de reservaciones */
+.reservaciones h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #FFC300;
+    text-align: center;
+}
+
+/* Estilos para el formulario */
+.reservaciones form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 1s ease;
+}
+
+/* Estilos para etiquetas en el formulario */
+.reservaciones label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #f2f2f2;
+    text-align: left;
+}
+
+/* Estilos para campos de entrada y botones */
+.reservaciones input,
+.reservaciones textarea,
+.reservaciones button {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    width: 100%;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos específicos para campos de entrada */
+.reservaciones input[type="text"],
+.reservaciones input[type="tel"],
+.reservaciones input[type="number"],
+.reservaciones input[type="date"],
+.reservaciones input[type="time"] {
+    border: 2px solid #FFC300;
+    transition: border-color 0.3s ease;
+}
+
+/* Cambio de color del borde al enfocar */
+.reservaciones input[type="text"]:focus,
+.reservaciones input[type="tel"]:focus,
+.reservaciones input[type="number"]:focus,
+.reservaciones input[type="date"]:focus,
+.reservaciones input[type="time"]:focus {
+    border-color: #FFD700;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(255, 215, 0, 0.5);
+}
+
+/* Estilos para botones y su cambio de color al pasar el cursor */
+.reservaciones button {
+    background-color: #FFC300;
+    color: #333;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.reservaciones button:hover {
+    background-color: #FFD700;
+}
+
+/* Estilos para los campos de entrada con espacio entre ellos */
+.reservaciones .input-field {
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #FFC300;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para la sección de consulta de reservas */
+.consulta-reservas {
+    background-color: rgba(51, 51, 51, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    max-width: 500px;
+    animation: fadeInUp 1s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para el título en la sección de consulta de reservas */
+.consulta-reservas h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #FFC300;
+    text-align: center;
+}
+
+/* Estilos para el formulario de consulta de reservas */
+.clave-acceso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el campo de contraseña */
+.clave-acceso input[type="password"] {
+    padding: 10px;
+    border: 2px solid #FFC300;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Cambio de color del borde al enfocar el campo de contraseña */
+.clave-acceso input[type="password"]:focus {
+    border-color: #FFD700;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(255, 215, 0, 0.5);
+}
+
+/* Estilos para el botón de consulta */
+.clave-acceso button {
+    background-color: #FFC300;
+    color: #333;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Cambio de color del botón de consulta al pasar el cursor */
+.clave-acceso button:hover {
+    background-color: #FFD700;
+}
+
+/* Estilos para la tabla de reservas */
+.tabla-reservas {
+    width: 100%;
+    overflow-x: auto; /* Habilita la barra de desplazamiento horizontal si es necesario */
+}
+
+.tabla-reservas table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* Estilos para las celdas de encabezado de la tabla */
+.tabla-reservas th {
+    background-color: #FFC300;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #FFC300;
+}
+
+/* Estilos para las celdas de datos de la tabla */
+.tabla-reservas td {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border: 1px solid #FFC300;
+}
+
+/* Estilos para filas pares de la tabla */
+.tabla-reservas tr:nth-child(even) {
+    background-color: #333;
+}
+
+/* Cambio de color de fondo al pasar el cursor sobre filas */
+.tabla-reservas tr:hover {
+    background-color: #555;
+}
+
+/* Estilos para el campo de entrada de fecha */
+#fechaBusqueda {
+    padding: 10px;
+    border: 2px solid #FFC300;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    width: 50%;
+    transition: border-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Cambiar el color del borde al pasar el cursor */
+#fechaBusqueda:focus {
+    border-color: #FFD700;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(255, 215, 0, 0.5);
+}
+
+
+/* Estilos para el botón de búsqueda */
+button {
+    background-color: #FFC300;
+    color: #333;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #FFD700;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajusta el tamaño del título en la sección de reservaciones */
+    .reservaciones h2 {
+        font-size: 24px;
+    }
+
+    /* Ajusta el tamaño del título en la sección de consulta de reservas */
+    .consulta-reservas h2 {
+        font-size: 24px;
+    }
+
+    /* Reduce el tamaño de fuente de los campos de entrada */
+    .reservaciones input,
+    .reservaciones textarea,
+    .reservaciones button {
+        font-size: 12px;
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 10px;
+    }
+
+    /* Reduce el tamaño de fuente de los campos de contraseña */
+    .clave-acceso input[type="password"] {
+        font-size: 12px;
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 10px;
+    }
+
+    /* Estilos para la tabla de reservas en pantallas pequeñas */
+    .tabla-reservas table {
+        font-size: 12px;
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-top: 20px;
+    }
+
+    /* Ajusta el tamaño de fuente del campo de búsqueda de fecha */
+    #fechaBusqueda {
+        font-size: 12px;
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 10px;
+    }
+}

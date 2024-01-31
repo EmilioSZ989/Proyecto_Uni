@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/icono.jpg" type="image/jpg">
+    <link rel="stylesheet" href="./css/headder-footer.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>MANILA</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/inicio/logo_dorado.png" alt="Logo MANILA"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./html/Catalogo_Comidas.html">Comidas</a></li>
+                <li><a href="./html/Bebidas.html">Bebidas</a></li>
+                <li><a href="./html/Reservacion.html">Reservación</a></li>
+                <li><a href="./html/Juego.html" onclick="inicializarJuego()">Juego</a></li> 
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="hero">
+        <div class="hero-content visible">
+            <div class="left-content">
+                <h1>Bienvenido a Restaurante <span class="neon-text">MANILA</span></h1>
+                <p>Adéntrate en un viaje gastronómico extraordinario en el corazón de nuestro restaurante. Cada plato es una sinfonía de sabores cuidadosamente compuestos, y cada bebida es una poesía líquida que despierta tus sentidos. Desde el primer bocado hasta el último sorbo, experimentarás un deleite que trasciende lo convencional. MANILA es el lugar donde los sueños culinarios se hacen realidad.</p>
+                <a href="./html/Reservacion.html" class="cta-button">Reservar ahora</a>
+            </div>
+            <div class="right-content">
+                <img src="./img/inicio/restaurant.jpg" alt="Imagen del restaurante">
+            </div>
+        </div>
+    </section>
+
+    <section class="slider">
+        <div class="slider-container">
+            <div class="slide">
+                <img src="./img/inicio/slide1.jpg" alt="Imagen 1">
+            </div>
+            <div class="slide">
+                <img src="./img/inicio/slide2.jpg" alt="Imagen 2">
+            </div>
+            <div class="slide">
+                <img src="./img/inicio/slide3.jpg" alt="Imagen 3">
+            </div>
+            <!-- Agrega más slides según sea necesario -->
+        </div>
+    </section>
+    <div class="slider-nav">
+        <button class="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <section class="plato-especial">
+        <div class="side-image left">
+            <img src="./img/inicio/spaguetti 1.jpeg" alt="Imagen Izquierda">
+        </div>
+        <div class="plato-info">
+            <h2>Plato Especial del Día</h2>
+            <p class="slogan">¡Saborea la exquisitez en cada bocado!</p>
+            <div class="plato-image">
+                <img src="./img/inicio/Spaghetti Carbonara.jpg" alt="Plato Especial">
+            </div>
+            <p class="precio">$24.99</p>
+            <a  class="cta-button" onclick="mostrarDetalles()">Ver Detalles</a>
+        </div>
+        <div class="side-image right">
+            <img src="./img/inicio/spaguetti 2.jpg" alt="Imagen Derecha">
+        </div>
+    </section>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="plato-info">
+                <h2>Spaghetti a la carbonara</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis laudantium impedit labore doloremque ad tenetur! Voluptatem sequi totam numquam repellendus, odit eius? Quod doloribus dolor accusamus, cumque animi voluptatum optio esse, id voluptatibus repudiandae aliquam. Ducimus maxime deserunt error, dolorum excepturi ipsam corporis sunt mollitia iure, consectetur temporibus quos inventore!</p>
+                <p class="precio">$24.99</p>
+            </div>
+            <div class="plato-image">
+                <img src="./img/inicio/Spaghetti Carbonara.jpg" alt="Plato Especial">
+            </div>
+            <a href="#modal" class="cta-button" onclick="cerrarModal()">
+                <i class="fas fa-times"></i> <!-- Icono de x -->
+            </a>
+        </div>
+    </div>
+    
+    
+    
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="#">
+                <img src="./img/inicio/logo_dorado.png" alt="Logo">
+            </a>
+            <p>Tu Restaurante Favorito</p>
+        </div>
+        <ul class="footer-links">
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./html/Catalogo_Comidas.html">Menú</a></li>
+            <li><a href="./html/Reservacion.html">Reservaciones</a></li>
+        </ul>
+        <p>&copy; 2023 Tu Restaurante Favorito. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="./js/index.js"></script>
+</body>
+</html>

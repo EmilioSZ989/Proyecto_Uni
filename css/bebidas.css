@@ -1,0 +1,112 @@
+/* Estilo para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Fondo oscuro por defecto */
+    color: #fff;
+}
+
+/* Estilo para el encabezado (header) */
+header {
+    background-color: #222; /* Color de fondo ligeramente más oscuro */
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Estilos para la sección de búsqueda y filtrado */
+section {
+    background-color: #444; /* Color de fondo para los contenedores */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para los títulos (h2) y (h3) */
+h2, h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #FFC300; /* Cambiamos el color de los títulos a #FFC300 */
+}
+
+/* Estilos para los cuadros de búsqueda y filtrado */
+.search-box, .filter-box {
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección de los elementos */
+    align-items: flex-start; /* Alineamos los elementos a la izquierda */
+    margin-bottom: 20px; /* Mayor separación entre cuadros */
+}
+
+label {
+    margin-bottom: 10px; /* Separación entre etiquetas y campos de entrada */
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    margin-bottom: 10px; /* Separación entre campos de entrada y botones */
+}
+
+button {
+    background-color: #FFC300;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Separación entre botones y elementos de abajo */
+}
+/* Estilo para los contenedores de bebidas en modo oscuro */
+.bebida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+/* Estilo para el título de la bebida en modo oscuro */
+.titulo_bebida {
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #FFC300; /* Cambiar el color del texto a #FFC300 */
+}
+
+/* Estilo para la imagen de la bebida */
+.img_bebida {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilo para la lista de ingredientes en modo oscuro */
+.i_bebida {
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Cambiar el color de fondo al pasar el cursor */
+.bebida:hover {
+    background-color: #222;
+}
+
+/* Estilo para el catálogo de bebidas */
+#resultados {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+

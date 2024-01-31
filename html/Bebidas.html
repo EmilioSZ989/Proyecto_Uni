@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/icono.jpg" type="image/jpg">
+    <link rel="stylesheet" href="/css/headder-footer.css">
+    <link rel="stylesheet" href="/css/bebidas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>MANILA</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index.html"><img src="/img/inicio/logo_dorado.png" alt="Logo MANILA"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/html/Catalogo_Comidas.html">Comidas</a></li>
+                <li><a href="/html/Bebidas.html">Bebidas</a></li>
+                <li><a href="/html/Reservacion.html">Reservación</a></li>
+                <li><a href="/html/Juego.html" onclick="inicializarJuego()">Juego</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Opciones de Búsqueda:</h2>
+        
+        <!-- Buscar por nombre -->
+        <label for="buscarNombre">Buscar por nombre:</label>
+        <input type="text" id="buscarNombre">
+        <button onclick="filtrarPorNombre()">Buscar</button>
+
+        <!-- Buscar por ingrediente -->
+        <label for="buscarIngrediente">Buscar por ingrediente:</label>
+        <input type="text" id="buscarIngrediente">
+        <button onclick="filtrarPorIngrediente()">Buscar</button>
+    
+        <!-- Filtrar por tipo -->
+        <label for="filtrarTipo">Filtrar por tipo:</label>
+        <select id="filtrarTipo">
+            <option value="Alcoholic">Alcohólicas</option>
+            <option value="Non_Alcoholic">Sin Alcohol</option>
+        </select>
+        <button onclick="filtrarPorTipo()">Filtrar</button>
+    
+        <!-- Filtrar por categoría -->
+        <label for="filtrarCategoria">Filtrar por categoría:</label>
+        <select id="filtrarCategoria">
+            <option value="Ordinary_Drink">Bebida Ordinaria</option>
+            <option value="Cocktail">Cóctel</option>
+        </select>
+        <button onclick="filtrarPorCategoria()">Filtrar</button>
+    </section>
+    
+
+    <section id="resultados">
+        <!-- Aquí se mostrarán los resultados de la búsqueda -->
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <a href="#">
+                <img src="/img/inicio/logo_dorado.png" alt="Logo">
+            </a>
+            <p>Tu Restaurante Favorito</p>
+        </div>
+        <ul class="footer-links">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/html/Catalogo_Comidas.html">Menú</a></li>
+            <li><a href="/html/Reservacion.html">Reservaciones</a></li>
+        </ul>
+        <p>&copy; 2023 Tu Restaurante Favorito. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="/js/bebidas.js"></script>
+</body>
+</html>

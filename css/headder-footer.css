@@ -1,0 +1,169 @@
+/* Navbar estilos */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Cambio en la dirección del flex */
+    align-items: center; /* Centrar horizontalmente */
+    padding: 10px; /* Reducción del espaciado */
+    border-radius: 15px; /* Hace que el contenedor del navbar sea un cuadrado con esquinas redondeadas */
+    overflow: hidden; /* Recorta lo que esté fuera del contenedor redondeado */
+    margin-bottom: 20px; /* Agregado para separar del contenido siguiente */
+    max-width: 99%; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    /* Agregado para efecto de superposición */
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Valores ajustados para mayor intensidad */
+}
+
+.logo a {
+    display: flex;
+    flex-direction: column; /* Coloca el texto debajo del logo */
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 250px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre el logo y el texto */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Cambio para mostrar las opciones de navegación una al lado de la otra */
+    flex-direction: row; 
+    align-items: center;
+}
+
+.nav-links li {
+    margin-right: 20px; /* Espacio entre las opciones de navegación */
+    transition: transform 0.2s ease; /* Agregado para la transición de escala */
+    font-size: 18px; /* Tamaño de fuente ajustado */
+    font-family: 'Roboto', sans-serif; /* Cambio de la fuente */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Agregado para la transición de fondo */
+    padding: 8px; /* Agregado para aumentar el área de interacción */
+}
+
+.nav-links a:hover {
+    color: #FFC300;
+    background-color: rgba(255, 195, 0, 0.1); /* Color de fondo al pasar el cursor */
+    border-radius: 5px; /* Añade un borde redondeado en el hover */
+}
+
+/* Efecto de escala al pasar el cursor sobre las opciones */
+.nav-links li:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos responsivos para el Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        max-width: 80%;
+        padding: 5px;
+    }
+
+    .logo img {
+        width: 30px;
+        margin-bottom: 5px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 16px; /* Tamaño de fuente ajustado */
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+    }
+}
+
+
+/*-----------------------------------------------------------------------------*/
+/* Estilos para el footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-logo img {
+    width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #FFC300;
+    background-color: rgba(255, 195, 0, 0.1);
+    border-radius: 5px;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+/* Estilos responsivos para el footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .footer-logo img {
+        width: 100px;
+    }
+}
